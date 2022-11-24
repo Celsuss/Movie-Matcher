@@ -7,7 +7,8 @@ app = Flask(__name__)
 CORS(app)
 
 host = os.environ['DB_HOST']
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgres://{}".format(host)
+# app.config["SQLALCHEMY_DATABASE_URI"] = "postgres://{}".format(host)
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://{}".format(host)
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
