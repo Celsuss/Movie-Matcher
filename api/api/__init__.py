@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
 
 # host = os.environ['DB_HOST']
 # port = os.environ['DB_PORT']
@@ -21,4 +21,4 @@ db = SQLAlchemy(app)
 
 @app.route('/')
 def hello():
-    return 'My First API !!'
+    return 'Hello World'
